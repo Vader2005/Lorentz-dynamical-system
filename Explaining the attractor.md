@@ -1,4 +1,6 @@
-The Lorenz attractor equations are:
+# The Lorenz Attractor
+
+The Lorenz attractor equations are defined by this nonlinear system of first-order ordinary differential equations (ODEs):
 
 $$
 \begin{aligned}
@@ -8,18 +10,18 @@ $$
 \end{aligned}
 $$
 
-They are governed by this nonlinear system of first-order ODEs. 
-The system essentially models atmospheric convection. 
-This system unfortunately cannot be solved analytically, so we will be solving it numerically using the Euler method and the RK4 method. 
+The system essentially models atmospheric convection. Because this system cannot be solved analytically, we will solve it numerically using the **Euler method** and the **RK4 (Runge-Kutta 4th Order) method**. 
 
-Defining the variables and constants:
+---
 
-x(t) - The speed at which the air rolls
-y(t) - Horizontal temperature difference between ascending and descending fluids
-z(t) - How much the temperature profile deviates from the equilibrium
+### Variables & Physical Meaning
+The states $x(t)$, $y(t)$, and $z(t)$ represent the physical properties of a fluid layer being heated from below:
 
-x(t), y(t) and z(t) represent the properties of a fluid layer being heated from below
+* **$x(t)$** — The speed/rate at which the air rolls (convective intensity).
+* **$y(t)$** — The horizontal temperature difference between ascending and descending fluids.
+* **$z(t)$** — The vertical temperature profile distortion (how much it deviates from linear equilibrium).
 
-sigma() - Relates the fluid's kinematic viscosity to its thermal diffusivity
-rho() - The temperature difference driving the convection
-beta() - Physical dimensions and aspect ratio of the fluid ratio
+### System Parameters (Constants)
+* **$\sigma$ (Sigma)** — The Prandtl number, relating the fluid's kinematic viscosity to its thermal diffusivity.
+* **$\rho$ (Rho)** — The Rayleigh number, representing the temperature difference driving the convection.
+* **$\beta$ (Beta)** — A geometric factor representing the physical dimensions and aspect ratio of the fluid layer.
