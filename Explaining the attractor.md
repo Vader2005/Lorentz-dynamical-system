@@ -31,9 +31,9 @@ The states $x(t)$, $y(t)$, and $z(t)$ represent the physical properties of a flu
 ### Our system Parameters
 We will be solving the classic Lorenz attractor problem with these conditions:
 \
-**$x(0) = 0$** \
-**$y(0) = 0$** \
-**$z(0) = 0$** \
+**$x(0) = 1$** \
+**$y(0) = 1$** \
+**$z(0) = 1$** \
 **$\sigma = 10$** \
 **$\rho = 28$** \
 **$\beta = \frac{8}{3}$**
