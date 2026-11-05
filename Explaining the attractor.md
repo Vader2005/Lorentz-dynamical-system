@@ -69,12 +69,12 @@ For the problem **$\frac{dy}{dt} = f(t, y)$** with **$y(t_0) = y_0$** and **$y(t
 \
 The RK4 method is defined as:
 \
-**$k_1 = f(x_n, y_n)$**
+**$k_1 = f(t_n, y_n)$**
 \
-**$k_2 = f(x_n + \frac{h}{2}, y_n + \frac{hk_1}{2})$**
+**$k_2 = f(t_n + \frac{h}{2}, y_n + \frac{hk_1}{2})$**
 \
-**$k_3 = f(x_n + \frac{h}{2}, y_n + \frac{hk_2}{2})$**
+**$k_3 = f(t_n + \frac{h}{2}, y_n + \frac{hk_2}{2})$**
 \
-**$k_4 = f(x_n + h, y_n + hk_3)$**
+**$k_4 = f(t_n + h, y_n + hk_3)$**
 \
 **$y_{n+1} = y_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
