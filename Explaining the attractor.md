@@ -78,3 +78,17 @@ The RK4 method is defined as:
 **$k_4 = f(t_n + h, y_n + hk_3)$**
 \
 **$y_{n+1} = y_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
+
+---
+
+### Applying RK4 to our problem
+
+#### x(t):
+
+**$f(t, x) = \sigma(y - x)$** \
+**$k_1 = \sigma(y_n - x_n)$** \
+**$k_2 = \sigma(y_n - x_n - \frac{hk_1}{2})$** \
+**$k_3 = \sigma(y_n - x_n - \frac{hk_2}{2})$** \
+**$k_4 = \sigma(y_n - x_n - hk_3)$** \
+**$x_{n+1} = x_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
+
