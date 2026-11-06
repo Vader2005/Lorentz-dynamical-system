@@ -65,47 +65,12 @@ Applying the approximation above to our system we get these equations: \
 
 An extremely powerful method of numerically solving ODE's is the RK4 method, which is based on Simpson's quadrature rule: \
 \
-For the problem **$\frac{dy}{dt} = f(t, y)$** with **$y(t_0) = y_0$** and **$y(t_n) = ?$** \
-\
-The RK4 method is defined as:
-\
-**$k_1 = f(t_n, y_n)$**
-\
-**$k_2 = f(t_n + \frac{h}{2}, y_n + \frac{hk_1}{2})$**
-\
-**$k_3 = f(t_n + \frac{h}{2}, y_n + \frac{hk_2}{2})$**
-\
-**$k_4 = f(t_n + h, y_n + hk_3)$**
-\
-**$y_{n+1} = y_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
+**$\frac{d \vec{**y**}}{dt} = \vec{**f**} (t, \vec{**y**})$** with **$\vec{**y**} (t_0) = \vec{**y_0**}$** \
+
+$$
+\vec{\mathbf{y}}(t) = \begin{bmatrix} y_1(t) \\ y_2(t) \\ \vdots \\ y_m(t) \end{bmatrix}
+$$
 
 ---
 
 ### Applying RK4 to our problem
-
-#### x(t):
-
-**$f(t, x) = \sigma(y - x)$** \
-**$k_1 = \sigma(y_n - x_n)$** \
-**$k_2 = \sigma(y_n - x_n - \frac{hk_1}{2})$** \
-**$k_3 = \sigma(y_n - x_n - \frac{hk_2}{2})$** \
-**$k_4 = \sigma(y_n - x_n - hk_3)$** \
-**$x_{n+1} = x_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
-
-#### y(t):
-
-**$f(t, y) = x(\rho - z) - y$** \
-**$k_1 = x_n(\rho - z_n) - y_n$** \
-**$k_2 = x_n(\rho - z_n) - y_n - \frac{hk_1}{2}$** \
-**$k_3 = x_n(\rho - z_n) - y_n - \frac{hk_2}{2}$** \
-**$k_4 = x_n(\rho - z_n) - y_n - hk_3$** \
-**$y_{n+1} = y_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
-
-#### z(t):
-
-**$f(t, z) = xy - \beta z$** \
-**$k_1 = x_ny_n - \beta z_n$** \
-**$k_2 = x_ny_n - \beta (z_n + \frac{hk_1}{2})$** \
-**$k_3 = x_ny_n - \beta (z_n + \frac{hk_2}{2})$** \
-**$k_4 = x_ny_n - \beta (z_n + hk_3)$** \
-**$z_{n+1} = z_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
