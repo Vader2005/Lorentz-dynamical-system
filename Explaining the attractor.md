@@ -100,3 +100,12 @@ The RK4 method is defined as:
 **$k_3 = x_n(\rho - z_n) - y_n - \frac{hk_2}{2}$** \
 **$k_4 = x_n(\rho - z_n) - y_n - hk_3$** \
 **$y_{n+1} = y_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
+
+#### z(t):
+
+**$f(t, z) = xy - \beta z$** \
+**$k_1 = x_ny_n - \beta z_n$** \
+**$k_2 = x_ny_n - \beta (z_n + \frac{hk_1}{2})$** \
+**$k_3 = x_ny_n - \beta (z_n + \frac{hk_2}{2})$** \
+**$k_4 = x_ny_n - \beta (z_n + hk_3)$** \
+**$z_{n+1} = z_n + \frac{h(k_1 + 2k_2 + 2k_3 + k_4)}{6}$**
