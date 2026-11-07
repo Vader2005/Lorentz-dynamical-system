@@ -1,4 +1,5 @@
 # Import necessary modules
+# Coding forward Euler manually
 import numpy as np
 import matplotlib.pyplot as plt
 
