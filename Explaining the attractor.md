@@ -61,16 +61,13 @@ Applying the approximation above to our system we get these equations: \
 
 ---
 
-### Rk4 Method
+### Rk4 Method for our problem
 
-An extremely powerful method of numerically solving ODE's is the RK4 method, which is based on Simpson's quadrature rule: \
-\
-**$\frac{d \vec{**y**}}{dt} = \vec{**f**} (t, \vec{**y**})$** with **$\vec{**y**} (t_0) = \vec{**y_0**}$** \
+An extremely accurate method for approximating ODE's is the RK4 method which is based on Simpsons quadrature rule and for our problem:
 
 $$
-\vec{\mathbf{y}}(t) = \begin{bmatrix} y_1(t) \\ y_2(t) \\ \vdots \\ y_m(t) \end{bmatrix}
+\mathbf{f}(\mathbf{u}) = \begin{bmatrix} \sigma(y - x) \\\ x(\rho - z) - y \\\ xy - \beta z \end{bmatrix}
 $$
 
----
-
-### Applying RK4 to our problem
+**$\vec{**k_1**} = \vec{**f**} (\vec{**u_n**})$** \
+**$$**
