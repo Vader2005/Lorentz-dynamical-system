@@ -75,3 +75,4 @@ $$
 **$\vec{**k_4**} = \vec{**f**} (\vec{**u_n**} + h\vec{**k_3**})$** \
 **$\vec{**u_{n+1}**} = \vec{**u_n**} + \frac{h(\vec{**k_1**} + 2\vec{**k_2**} + 2\vec{**k_3**} + \vec{**k_4**})}{6}$**
 
+Need to: Go through each python file(emphasis on actual one) noting new module functions, create steps for solving any dynamic problem. 
