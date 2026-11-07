@@ -58,3 +58,20 @@ Applying the approximation above to our system we get these equations: \
 **$x_{n+1} = x_n + h(\sigma(y_n - x_n))$** \
 **$y_{n+1} = y_n + h(x_n(\rho - z_n) - y_n)$** \
 **$z_{n+1} = z_n + h(x_ny_n - \beta*z_n)$**
+
+---
+
+### Rk4 Method for our problem
+
+An extremely accurate method for approximating ODE's is the RK4 method which is based on Simpsons quadrature rule and for our problem:
+
+$$
+\mathbf{f}(\mathbf{u}) = \begin{bmatrix} \sigma(y - x) \\\ x(\rho - z) - y \\\ xy - \beta z \end{bmatrix}
+$$
+
+**$\vec{**k_1**} = \vec{**f**} (\vec{**u_n**})$** \
+**$\vec{**k_2**} = \vec{**f**} (\vec{**u_n**} + \frac{h\vec{**k_1**}}{2})$** \
+**$\vec{**k_3**} = \vec{**f**} (\vec{**u_n**} + \frac{h\vec{**k_2**}}{2})$** \
+**$\vec{**k_4**} = \vec{**f**} (\vec{**u_n**} + h\vec{**k_3**})$** \
+**$\vec{**u_{n+1}**} = \vec{**u_n**} + \frac{h(\vec{**k_1**} + 2\vec{**k_2**} + 2\vec{**k_3**} + \vec{**k_4**})}{6}$**
+
