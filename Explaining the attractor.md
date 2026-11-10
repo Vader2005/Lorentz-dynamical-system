@@ -136,4 +136,11 @@ If:
 * **$\lambda > 0$** - The system is chaotic and error grows exponentially
 * **$\lambda <= 0$** - The system is stable
 
+We visualise this using an Error Divergence Plot, where we use the baseline model and take its Euclidean Distance with a modified model and record that distance. We then plot the log of that distance, transforming the exponential growth:
 
+![CError Divergence Plot](images/Chaos.png)
+
+We observe:
+
+* From t=0 to t=25 the system has an increasing upward trend. This is the proof that we have that this system has exponential growth error, the slope of this region would be the maximum Lyapunov Exponent.
+* From t=25 to t=50, we observe the separation distance oscillates between 2 and 4, this indicates the baseline simulation and modified simulation are now wandering independently of each other.
