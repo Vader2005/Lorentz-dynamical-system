@@ -77,3 +77,11 @@ $$
 **$\vec{**u_{n+1}**} = \vec{**u_n**} + \frac{h(\vec{**k_1**} + 2\vec{**k_2**} + 2\vec{**k_3**} + \vec{**k_4**})}{6}$**
 
 This method, unlike the Forward Euler method, can handle larger step sizes and still simulate the system with high accuracy
+
+---
+
+### Forward Euler results
+
+![Forward Euler results](images/Forward_Euler.png)
+
+This is the Forward Euler approximation with **$h = 0.005$**, approximating the solution from t=0 to t=50. We observe that we do get the classical butterfly pattern with our chosen step size; however, if we had to increase our step size, the approximation would fail. 
