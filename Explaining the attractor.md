@@ -98,4 +98,42 @@ In the simulation above, we increased the step size to **$h = 0.01$**, and as ex
 
 This is the RK4 algorithm result with **$h = 0.005$**. We observe that the phase portrait is a bit more detailed using this algorithm, and here's what the approximation looks like if we had to increase our step size:
 
+![RK4 larger h results](images/RK4_larger_h.png)
+
+We increased the step size to **$h = 0.01$** in the simulation above, and we observe that it is far more accurate than the Forward Euler approximation with **$h = 0.01$**, it maintains its shape and trajectories far better even with a much larger step size. This demonstrates the accuracy of the RK4 method even at larger step sizes. 
+
+---
+
+### Scipy
+
+This was done just to demonstrate how to work with dynamic systems in the real world using the very powerful mathematical computing module called Scipy. For this problem, we once again made use of the RK4 method
+
+![Simulating the system using Scipy](images/Phase_portrait.png)
+
+It's almost exactly the same as the RK4 method simulated previously, and this time we also observe how each individual variable evolves and changes with respect to time, the Time Series plot:
+
+![Time Series Plot](images/Time_series_plot.png)
+
+This plot explains how each variable evolves with time, as well as how they impact each other(from sudden drops and rises). 
+
+--- 
+
+### Chaos Analysis
+
+Stability is one of the most important things to verify and check in numerical approximations and systems. For this we use Lyapunov Exponents to tell us how chaotic and unstable our system is. 
+
+$$d(t) \approx d_0 e^{\lambda t}$$
+
+Where:
+
+* **$d(t)$**: The separation distance between the trajectories at time $t$.
+* **$d_0$**: The initial separation distance at time $t = 0$.
+* **$\lambda$**: The Lyapunov exponent.
+* **$t$**: The elapsed time.
+
+If:
+
+* **$\lambda > 0$** - The system is chaotic and error grows exponentially
+* **$\lambda <= 0$** - The system is stable
+
 
