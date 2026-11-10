@@ -85,3 +85,17 @@ This method, unlike the Forward Euler method, can handle larger step sizes and s
 ![Forward Euler results](images/Forward_Euler.png)
 
 This is the Forward Euler approximation with **$h = 0.005$**, approximating the solution from t=0 to t=50. We observe that we do get the classical butterfly pattern with our chosen step size; however, if we had to increase our step size, the approximation would fail. 
+
+![Forward Euler larger h results](images/Forward_Euler_larger_h.png)
+
+In the simulation above, we increased the step size to **$h = 0.01$**, and as expected, the model accuracy is far more unstable now and less accurate.  
+
+--- 
+
+### RK4 Results
+
+![RK4 Results](images/RK4.png)
+
+This is the RK4 algorithm result with **$h = 0.005$**. We observe that the phase portrait is a bit more detailed using this algorithm, and here's what the approximation looks like if we had to increase our step size:
+
+
