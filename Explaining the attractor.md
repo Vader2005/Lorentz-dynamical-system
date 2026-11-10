@@ -76,4 +76,4 @@ $$
 **$\vec{**k_4**} = \vec{**f**} (\vec{**u_n**} + h\vec{**k_3**})$** \
 **$\vec{**u_{n+1}**} = \vec{**u_n**} + \frac{h(\vec{**k_1**} + 2\vec{**k_2**} + 2\vec{**k_3**} + \vec{**k_4**})}{6}$**
 
-
+This method, unlike the Forward Euler method, can handle larger step sizes and still simulate the system with high accuracy
